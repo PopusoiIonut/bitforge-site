@@ -1,9 +1,30 @@
+import { useState } from 'react'
 import Hero from './components/Hero'
 import BentoGrid from './components/BentoGrid'
 import Contact from './components/Contact'
+import ProjectModal from './components/ProjectModal'
 import './index.css'
 
 function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleOpenProject = (project) => {
+    setSelectedProject(project);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleCloseProject = () => {
+    setSelectedProject(null);
+    document.body.style.overflow = 'auto';
+  };
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <main style={{ width: '100%', background: 'var(--bg-deep)', color: 'white' }}>
       <nav style={{
@@ -18,11 +39,16 @@ function App() {
         backdropFilter: 'blur(10px)',
         background: 'rgba(15, 15, 18, 0.8)'
       }}>
-        <div style={{ fontWeight: '700', fontSize: '1.2rem', fontFamily: 'Outfit' }}>BitForge Labs</div>
+        <div
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{ fontWeight: '700', fontSize: '1.2rem', fontFamily: 'Outfit', cursor: 'pointer' }}
+        >
+          BitForge Labs
+        </div>
         <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', opacity: 0.8 }}>
-          <a href="#" style={{ color: 'white', textDecoration: 'none' }}>Services</a>
-          <a href="#" style={{ color: 'white', textDecoration: 'none' }}>Projects</a>
-          <a href="#contact" style={{
+          <a href="#projects" onClick={(e) => { e.preventDefault(); scrollTo('projects'); }} style={{ color: 'white', textDecoration: 'none' }}>Projects</a>
+          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact'); }} style={{ color: 'white', textDecoration: 'none' }}>Contact</a>
+          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact'); }} style={{
             background: 'var(--accent-blue)',
             padding: '0.5rem 1rem',
             borderRadius: '8px',
@@ -34,8 +60,14 @@ function App() {
       </nav>
 
       <Hero />
-      <BentoGrid />
+      <BentoGrid onOpenProject={handleOpenProject} />
       <Contact />
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={handleCloseProject}
+      />
     </main>
   )
 }
