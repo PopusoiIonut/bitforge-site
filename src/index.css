@@ -141,11 +141,51 @@ h4 {
   margin-bottom: 1.5rem;
 }
 
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.premium {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #0055ff 100%);
+  color: white !important;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 163, 255, 0.3);
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 163, 255, 0.5);
+  background: linear-gradient(135deg, #00b3ff 0%, #1a75ff 100%);
+}
+
+.premium:active {
+  transform: translateY(0);
+}
+
 /* responsive */
 @media (max-width: 768px) {
   .bento-grid {
     grid-template-columns: 1fr;
     padding: 1rem;
+  }
+
+  .glass-card {
+    grid-column: auto !important;
   }
 
   .modal-body {

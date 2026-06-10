@@ -4,34 +4,59 @@ import { motion } from 'framer-motion';
 const BentoGrid = ({ onOpenProject }) => {
     const projects = [
         {
-            title: 'ELASTIC',
-            desc: 'Scale dynamically with AI-driven flexibility.',
-            longDesc: 'Elastic is a revolutionary iOS application designed for dynamic scaling using local AI. It leverages on-device processing to provide unmatched speed and privacy for power users.',
-            tag: 'iOS App | Cloud Integration',
+            title: 'ELASTICAPP',
+            desc: 'ADHD habit tracker designed for flexibility.',
+            longDesc: 'The first habit tracker designed specifically for the ADHD mind, built on the philosophy that consistency isn\'t about being perfect—it\'s about being flexible. Most habit trackers shame you for breaking streaks; Elastic encourages you to adjust based on your daily energy levels.',
+            tag: 'ADHD Habit Tracker | iOS App',
             grid: 'span 6',
             color: 'rgba(0, 163, 255, 0.1)',
-            tech: ['SwiftUI', 'CoreML', 'CloudKit', 'Local LLMs'],
-            features: ['Real-time AI scaling', 'Encrypted data sync', 'Offline first architecture']
-        },
-        {
-            title: 'FOCUSBAR',
-            desc: 'Boost productivity & eliminate distractions.',
-            longDesc: 'FocusBar is a minimalist macOS and iOS productivity tool that uses AI to detect distractions and help you stay in the flow. Built with local AI to ensure your data never leaves your device.',
-            tag: 'macOS + iOS | AI Assist',
-            grid: 'span 3',
-            color: 'rgba(255, 120, 0, 0.1)',
-            tech: ['AppKit', 'SwiftUI', 'Vision Framework'],
-            features: ['Intent recognition', 'Smart notifications', 'Focus analytics']
+            tech: ['SwiftUI', 'CoreData', 'Local Notifications', 'ADHD UX'],
+            features: ['Flexible habit scaling', 'Streak pressure elimination', '100% Private & Offline'],
+            url: 'https://apps.apple.com/us/app/elasticapp/id6759823380'
         },
         {
             title: 'WELLNESSFORGE',
-            desc: 'Holistic health tracking using local AI.',
-            longDesc: 'A comprehensive wellness platform that integrates with HealthKit to provide deep insights into your physical and mental well-being using advanced on-device analytics.',
-            tag: 'iOS App | HealthKit',
-            grid: 'span 3',
-            color: 'rgba(76, 217, 100, 0.1)',
-            tech: ['HealthKit', 'CoreData', 'TabularData'],
-            features: ['Biometric trends', 'Private health coaching', 'Activity automation']
+            desc: 'Intelligent wellness companion and HealthKit dashboard.',
+            longDesc: 'An intelligent wellness companion that turns your real-time biometric data into personalized, actionable guidance every single day. Pulls steps, active calories, heart rate, sleep, and nutrition directly from HealthKit and updates in real time.',
+            tag: 'Health & Fitness | iOS App',
+            grid: 'span 6',
+            color: 'rgba(46, 204, 113, 0.1)',
+            tech: ['SwiftUI', 'HealthKit', 'CoreML', 'ARKit'],
+            features: ['Daily Oracle & wellness readings', 'AI Meal Scanner (Pro)', 'AR Workout Guide (Pro)', 'Background Sync'],
+            url: 'https://apps.apple.com/us/app/wellnessforge/id6759639691'
+        },
+        {
+            title: 'SMARTSUBTRACKER',
+            desc: 'Track subscriptions and budget limitations.',
+            longDesc: 'A sleek tool to keep track of your subscriptions and notify you when due dates approach. Supports USD/GBP, monthly or annual cycles, and outputs a clear breakdown of monthly payments to help you manage your budget and spending.',
+            tag: 'Finance & Budget | iOS App',
+            grid: 'span 4',
+            color: 'rgba(243, 156, 18, 0.1)',
+            tech: ['SwiftUI', 'UserNotifications', 'CoreData', 'Locale API'],
+            features: ['Dual currency support (USD/GBP)', 'Due date push alerts', 'Clear monthly breakdown', 'Offline database'],
+            url: 'https://apps.apple.com/us/app/smartsubtracker/id6759440837'
+        },
+        {
+            title: 'NOTES2QUOTE',
+            desc: 'Generate quotes and invoices in seconds.',
+            longDesc: 'A professional business utility that generates quotes and invoices instantly from notes, business cards, dictation, or manual text. Features a customizable profile for the self-employed, multi-currency support ($/£/€), and PDF sharing.',
+            tag: 'Productivity & Business | iOS App',
+            grid: 'span 4',
+            color: 'rgba(155, 89, 182, 0.1)',
+            tech: ['SwiftUI', 'PDFKit', 'Speech Recognition', 'MailKit'],
+            features: ['Rapid PDF invoice generation', 'Notes & Dictation OCR', 'Custom business profiles', 'Saved history database'],
+            url: 'https://apps.apple.com/us/app/notes2quote/id6759196157'
+        },
+        {
+            title: 'GHOST GUIDE AR',
+            desc: 'Location-aware AR historic audio guide.',
+            longDesc: 'Turn your daily walk into a journey through time. Ghost Guide AR is a hands-free, location-aware audio guide that reveals the hidden history scattered all around you by whispering stories as you pass trigger points.',
+            tag: 'AR & Travel | iOS App',
+            grid: 'span 4',
+            color: 'rgba(231, 76, 60, 0.1)',
+            tech: ['SwiftUI', 'ARKit', 'CoreLocation', 'AVFoundation'],
+            features: ['Trigger-point location audio', 'Augmented Reality overlays', 'Hands-free navigation', 'Smart glasses compatibility'],
+            url: 'https://apps.apple.com/us/app/ghost-guide-ar/id6765615176'
         },
         {
             title: 'DIGITAL FRONTIER',
@@ -39,7 +64,7 @@ const BentoGrid = ({ onOpenProject }) => {
             longDesc: 'Solo-engineered Web3 ecosystems including the Pixelated Artefacts Brit Ape Club. Developed smart contracts, minting engines, and community dApps on Ethereum and Solana.',
             tag: '100% Solo | Web3 | dApps',
             grid: 'span 8',
-            color: 'rgba(168, 85, 247, 0.1)',
+            color: 'rgba(142, 68, 173, 0.1)',
             tech: ['Solidity', 'Rust', 'React', 'Ethers.js'],
             features: ['Custom ERC-721 contracts', 'Gas-optimized minting', 'Cross-chain bridges']
         },

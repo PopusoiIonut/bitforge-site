@@ -11,9 +11,18 @@ const Contact = () => {
                     Let's forge something extraordinary together. Whether it's a local AI integration, a rocksolid iOS app, or a next-gen Web3 project, I'm here to help.
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                    <button className="premium" onClick={() => window.location.href = 'mailto:popusoiionut4@gmail.com'}>
+                    <a
+                        href="mailto:popusoiionut4@gmail.com"
+                        className="premium"
+                        style={{
+                            textDecoration: 'none',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
+                        }}
+                    >
                         Email Me
-                    </button>
+                    </a>
                     <button
                         onClick={() => window.open('https://github.com/PopusoiIonut', '_blank')}
                         style={{
