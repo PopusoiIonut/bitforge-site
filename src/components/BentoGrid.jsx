@@ -63,16 +63,28 @@ const BentoGrid = ({ onOpenProject }) => {
             desc: 'Independent engineering of NFT ecosystems.',
             longDesc: 'Solo-engineered Web3 ecosystems including the Pixelated Artefacts Brit Ape Club. Developed smart contracts, minting engines, and community dApps on Ethereum and Solana.',
             tag: '100% Solo | Web3 | dApps',
-            grid: 'span 8',
+            grid: 'span 6',
             color: 'rgba(142, 68, 173, 0.1)',
             tech: ['Solidity', 'Rust', 'React', 'Ethers.js'],
             features: ['Custom ERC-721 contracts', 'Gas-optimized minting', 'Cross-chain bridges']
         },
         {
+            title: 'CULTURE CODE',
+            desc: 'Frictionless travel laws and local etiquette advisor.',
+            longDesc: 'A premium travel companion that grounds destination laws and cultural rules using Wikipedia context and Gemini AI analysis, ensuring you always travel respectably and safely anywhere in the world.',
+            tag: 'Travel & Rules | iOS App',
+            grid: 'span 6',
+            color: 'rgba(52, 152, 219, 0.1)',
+            tech: ['SwiftUI', 'Wikipedia API', 'Gemini AI', 'Offline Cache'],
+            features: ['Surprising local laws scanner', 'Factual Wikipedia grounding', 'Support for 200+ countries', 'Custom premium iOS design'],
+            url: 'https://github.com/PopusoiIonut/Culture-Code',
+            supportUrl: '/support/culturecode'
+        },
+        {
             title: 'STUDIO STATUS',
             desc: 'Online & taking new projects.',
             tag: 'Available Now',
-            grid: 'span 4',
+            grid: 'span 12',
             status: true
         }
     ];

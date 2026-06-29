@@ -46,10 +46,27 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                                 </div>
                             </div>
 
-                            <div style={{ marginTop: '4rem', display: 'flex', gap: '1rem' }}>
+                            <div style={{ marginTop: '4rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                                 {project.url && (
                                     <button className="premium" onClick={() => window.open(project.url, '_blank')}>
                                         Visit Project
+                                    </button>
+                                )}
+                                {project.supportUrl && (
+                                    <button 
+                                        style={{
+                                            background: 'rgba(0, 163, 255, 0.1)',
+                                            color: 'var(--accent-blue)',
+                                            border: '1px solid rgba(0, 163, 255, 0.3)',
+                                            padding: '0.8rem 1.5rem',
+                                            borderRadius: '12px',
+                                            cursor: 'pointer',
+                                            fontWeight: '600',
+                                            fontFamily: 'Outfit, sans-serif'
+                                        }}
+                                        onClick={() => window.open(project.supportUrl, '_self')}
+                                    >
+                                        App Support
                                     </button>
                                 )}
                                 <button
@@ -59,7 +76,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                                         border: '1px solid var(--border-glass)',
                                         padding: '0.8rem 1.5rem',
                                         borderRadius: '12px',
-                                        cursor: 'pointer'
+                                        cursor: 'pointer',
+                                        fontFamily: 'Outfit, sans-serif'
                                     }}
                                     onClick={onClose}
                                 >
