@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Social from './Social';
 
 const Contact = () => {
+    const [copied, setCopied] = useState(false);
+
+    const handleEmailClick = (e) => {
+        e.preventDefault();
+        
+        // Copy to clipboard
+        navigator.clipboard.writeText('popusoiionut4@gmail.com')
+            .then(() => {
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+            })
+            .catch((err) => {
+                console.error('Failed to copy text: ', err);
+            });
+            
+        // Open default mail client
+        window.location.href = 'mailto:popusoiionut4@gmail.com';
+    };
+
     return (
         <section id="contact" style={{ padding: '8rem 2rem', textAlign: 'center' }}>
             <div className="glass-card" style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -13,15 +32,37 @@ const Contact = () => {
                 <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
                     <a
                         href="mailto:popusoiionut4@gmail.com"
+                        onClick={handleEmailClick}
                         className="premium"
                         style={{
                             textDecoration: 'none',
                             display: 'inline-flex',
                             alignItems: 'center',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            position: 'relative'
                         }}
                     >
                         Email Me
+                        {copied && (
+                            <span style={{
+                                position: 'absolute',
+                                bottom: '130%',
+                                left: '50%',
+                                transform: 'translateX(-50%)',
+                                background: 'rgba(0, 163, 255, 0.95)',
+                                color: 'white',
+                                padding: '0.4rem 0.8rem',
+                                borderRadius: '8px',
+                                fontSize: '0.8rem',
+                                fontWeight: '600',
+                                whiteSpace: 'nowrap',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.35)',
+                                pointerEvents: 'none',
+                                animation: 'fadeIn 0.2s ease-out'
+                            }}>
+                                Copied to clipboard! ✓
+                            </span>
+                        )}
                     </a>
                     <button
                         onClick={() => window.open('https://github.com/PopusoiIonut', '_blank')}
