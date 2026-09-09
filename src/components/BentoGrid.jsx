@@ -69,6 +69,17 @@ const BentoGrid = ({ onOpenProject }) => {
             features: ['Custom ERC-721 contracts', 'Gas-optimized minting', 'Cross-chain bridges']
         },
         {
+            title: 'ORBITALWATCH',
+            desc: 'Autonomous satellite ground station & weather telemetry receiver.',
+            longDesc: 'A native macOS application and autonomous ground station terminal engineered to track, schedule, capture, and decode real-time transmissions from Earth-observation and weather satellites (NOAA-15, NOAA-18, NOAA-19, Meteor-M, and the ISS) with SGP4 orbital mechanics, Doppler tuning, and false-color cloud reconstruction.',
+            tag: 'Space & SDR | macOS App',
+            grid: 'span 6',
+            color: 'rgba(0, 229, 255, 0.1)',
+            tech: ['SwiftUI', 'SGP4 Mechanics', 'Accelerate DSP', 'RTL-SDR', 'CelesTrak'],
+            features: ['Real-time Polar Sky Radar', 'Live FFT Waterfall Spectrogram', 'NOAA APT Multi-Channel Decoder', 'CelesTrak TLE Sync'],
+            url: 'https://github.com/PopusoiIonut/OrbitalWatch'
+        },
+        {
             title: 'CULTURE CODE',
             desc: 'Frictionless travel laws and local etiquette advisor.',
             longDesc: 'A premium travel companion that grounds destination laws and cultural rules using Wikipedia context and Gemini AI analysis, ensuring you always travel respectably and safely anywhere in the world.',
