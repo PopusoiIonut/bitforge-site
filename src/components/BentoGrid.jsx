@@ -92,6 +92,17 @@ const BentoGrid = ({ onOpenProject }) => {
             supportUrl: '/support/culturecode'
         },
         {
+            title: 'DOSAR AUTO',
+            desc: 'Automotive compliance, fleet records & document vault.',
+            longDesc: 'A comprehensive vehicle paperwork and fleet management companion built natively for Android. Tracks vehicle registration, insurance (RCA), technical inspections (ITP), road taxes (Rovinieta), fuel logs, maintenance history, and refrigeration temperature checks with offline local notifications.',
+            tag: 'Automotive & Fleet | Android App',
+            grid: 'span 6',
+            color: 'rgba(230, 126, 34, 0.1)',
+            tech: ['Kotlin', 'Jetpack Compose', 'Room DB', 'WorkManager', 'Material 3'],
+            features: ['Document expiry notifications', 'Fuel & mileage tracking', 'Service & maintenance history', 'Refrigeration compliance checks'],
+            url: 'https://github.com/PopusoiIonut/DosarAuto'
+        },
+        {
             title: 'STUDIO STATUS',
             desc: 'Online & taking new projects.',
             tag: 'Available Now',
