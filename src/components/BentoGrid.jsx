@@ -115,11 +115,16 @@ const BentoGrid = ({ onOpenProject }) => {
         },
         {
             title: 'STUDIO STATUS',
-            desc: 'Online & taking new projects.',
-            tag: 'Available Now',
+            desc: 'Busy & developing projects.',
+            longDesc: 'BitForge Labs is currently operating at full capacity, actively developing and deploying next-generation mobile, AI, and systems engineering projects. Stay tuned for upcoming releases!',
+            tag: 'In Development',
             grid: 'span 6',
-            color: 'rgba(76, 217, 100, 0.1)',
-            status: true
+            color: 'rgba(255, 159, 10, 0.1)',
+            status: true,
+            statusText: 'Busy',
+            statusColor: '#FF9F0A',
+            tech: ['iOS / macOS', 'Android', 'Local AI', 'Systems Engineering'],
+            features: ['Active Project Development', 'Next-Gen App Architecture', 'Local Intelligence & SDR']
         }
     ];
 
@@ -176,9 +181,9 @@ const BentoGrid = ({ onOpenProject }) => {
                         <div style={{ marginTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             <span style={{ fontSize: '0.8rem', opacity: 0.6, fontWeight: '600' }}>{p.tag}</span>
                             {p.status && (
-                                <span style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', color: '#4CD964' }}>
-                                    <span style={{ width: 8, height: 8, background: '#4CD964', borderRadius: '50%', boxShadow: '0 0 10px #4CD964' }}></span>
-                                    Online
+                                <span style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.9rem', color: p.statusColor || '#FF9F0A' }}>
+                                    <span style={{ width: 8, height: 8, background: p.statusColor || '#FF9F0A', borderRadius: '50%', boxShadow: `0 0 10px ${p.statusColor || '#FF9F0A'}` }}></span>
+                                    {p.statusText || 'Busy'}
                                 </span>
                             )}
                         </div>
