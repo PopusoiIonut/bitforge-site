@@ -103,10 +103,22 @@ const BentoGrid = ({ onOpenProject }) => {
             url: 'https://github.com/PopusoiIonut/DosarAuto'
         },
         {
+            title: 'DROIDCONNECT',
+            desc: 'Wireless Android bridge, ADB manager & low-latency screen streamer.',
+            longDesc: 'A native macOS bridge and desktop utility engineered to wirelessly connect, manage, and mirror Android devices without physical cables. Features 1-click wireless ADB pairing, low-latency screen streaming, bi-directional file management, clipboard synchronization, and APK sideloading.',
+            tag: 'Open Source | Android & macOS Utility',
+            grid: 'span 6',
+            color: 'rgba(61, 220, 132, 0.1)',
+            tech: ['SwiftUI', 'Wireless ADB', 'scrcpy / H.264', 'WebSocket', 'AppKit'],
+            features: ['1-Click Wireless ADB Pairing', 'Low-Latency Screen Mirroring', 'Bi-directional File Explorer', 'Clipboard & App Management'],
+            url: 'https://github.com/PopusoiIonut/DroidConnectApp'
+        },
+        {
             title: 'STUDIO STATUS',
             desc: 'Online & taking new projects.',
             tag: 'Available Now',
-            grid: 'span 12',
+            grid: 'span 6',
+            color: 'rgba(76, 217, 100, 0.1)',
             status: true
         }
     ];
